@@ -1,6 +1,6 @@
 # 🧠 Kubernetes Architecture: Key Terms & Concepts
 
-This document provides definitions and explanations of essential components in a Kubernetes (K8s) architecture.
+This document provides definitions and explanations of essential components in a Kubernetes (K8s) architecture. Whether you're preparing for the CKA exam or building your own cluster, understanding these terms is foundational.
 
 ---
 
@@ -33,6 +33,13 @@ Manages network rules on each node. Implements service discovery and routing by 
 
 ### 🧱 Container Runtime
 The software responsible for running containers. Supported runtimes include containerd, CRI-O, and (historically) Docker.
+
+---
+
+## 🧬 Kubernetes Workload Objects
+
+### 📦 Pod
+The smallest and simplest unit in the Kubernetes object model. A Pod represents a single instance of a running process in your cluster and can contain one or more tightly coupled containers that share networking and storage.
 
 ---
 
