@@ -1,4 +1,4 @@
- Project-1: # Kubernetes Pod Creation 
+# Project-1: # Kubernetes Pod Creation 
 
 This project demonstrates how to create a simple **Kubernetes Pod** using a manifest file. It is intended for beginners looking to understand the core concepts of Kubernetes.
 
