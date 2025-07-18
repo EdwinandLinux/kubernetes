@@ -39,6 +39,8 @@ docker push edmundo1986/edureka-webpage:latest
 ☸️ Step 3: Deploy on Kubernetes:
 
 This YAML file defines two Kubernetes objects:
+
+
 **Deployments**: Manage the lifecycle of one or more identical Pods, including scaling, updates, and rollbacks. 
 **Services**: Provide a stable endpoint for accessing a set of Pods, abstracting away the underlying Pod details. 
 
