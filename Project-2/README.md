@@ -19,3 +19,11 @@ git clone https://github.com/edurekacontent/dockerContent
 cd dockerContent
 ```
 
+🏗️ Step 2: Build and Push Docker Image
+Make sure the Dockerfile looks like this:
+
+```
+Dockerfile
+FROM nginx:alpine
+COPY . /usr/share/nginx/html
+```
