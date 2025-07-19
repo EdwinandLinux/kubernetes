@@ -17,6 +17,7 @@ This project demonstrates how to deploy a  webpage using a **Dockerized webpage 
 ```
 git clone https://github.com/edurekacontent/dockerContent
 cd dockerContent
+cd 'Case-study app'
 ```
 
 🏗️ Step 2: Build and Push Docker Image
@@ -52,4 +53,39 @@ apiVerion: app/v1
 kind: Deployment
 metadata:
    name: edureka-web
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: edureka-web
+  template:
+    metadata:
+      labels:
+        app: edureka-web
+    spec:
+      containers:
+      - name: edureka-web
+        image: edmundo1986/edureka-webpage:latest
+        ports:
+        - containerPort:80
+---
+apiVersion: v1
+kind: Service
+metadate:
+  name: edureka-web-service
+spec:
+  selector:
+    app: edureka-web
+  type: NodePort
+  ports:
+    - port: 80
+      tarfetPort: 80
+      nodePort: 30036
+
+```
+🌐 Step 4: Access the Web Page:
+
+```
+kubectl port-forward service/edureka-web-service 8080:80
+http://localhost:8080
 ```
