@@ -1,0 +1,20 @@
+appVersion: apps/v1
+kind: DaemontSet
+metadata:
+  name: edureka-web-daemontset
+  labels:
+    app: edureka-web
+spec:
+  selector:
+    matchLabels:
+      app: edureka-web
+  template:
+    metadata:
+      labels:
+        app: edureka-web
+    spec:
+      containers:
+      - name: edureka-web
+        image: edmundo1986/edureka-webpage:latest
+        ports:
+        - containerPort: 80
