@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: nginx-pv
+spec:
+  capacity:
+    storage: 100Mi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+   path: "/tmp/nginx-data"
+ 
+
+# This file creates a local volume on the Kubernetes 
+# node using /tmp/nginx-data. This is for development/testing only—use cloud volumes like EBS or NFS in production.
+
+
+
+  

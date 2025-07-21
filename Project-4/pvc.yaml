@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: nginx-pvc
+spec:
+  resources:
+    requests:
+      storage: 50Mi
+  accessModes:
+    - ReadWriteOnce
+
+# This file requests storage from the available PVs. 
+# It will bind to nginx-pv since it matches on size and access mode.
+
